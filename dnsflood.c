@@ -200,7 +200,7 @@ int make_question_packet(char *data, char *name, int type)
 /* for other type querry
 */
 	if(type == TYPE_MX){
-		nameformatIP(name,data);
+		nameformat(name,data);
   	*( (u_short *) (data+strlen(data)+1) ) = htons(TYPE_MX);
 	}
 	if(type == TYPE_PTR){
@@ -208,7 +208,7 @@ int make_question_packet(char *data, char *name, int type)
   	*( (u_short *) (data+strlen(data)+1) ) = htons(TYPE_PTR);
 	}
 	if(type == TYPE_AAAA){
-		nameformatIP(name,data);
+		nameformat(name,data);
   	*( (u_short *) (data+strlen(data)+1) ) = htons(TYPE_AAAA);
 	}
        
